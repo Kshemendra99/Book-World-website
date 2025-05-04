@@ -1,0 +1,218 @@
+<html lang="en">
+    
+<head>
+<title>Categories Book World </title>
+<link rel="stylesheet" href="web.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+</head>
+    <body>
+        
+<!--Category Page-->
+        
+            <section class="Category">
+                
+<!--Navigation Bar-->
+                
+            <nav class= "navigation">
+            <a href="home.html">
+                <img src="images/logo1.png" />
+            
+            </a>
+            <div class="nav-links" id="nav_links">
+                <i class="fa fa-times fa-lg " onclick="hide_nav()"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="catogary.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                </ul>
+            </div>
+                <i class="fa fa-bars fa-lg" onclick="show_nav()" ></i>
+                
+                <form class="search-bar" action="/search" method="GET">
+                    <input type="text" placeholder="Search..." name="query">
+                    <button type="submit">Search</button>
+                </form>
+                
+                </nav>
+                
+                <div class="choose_category">
+        
+                <form>
+
+    
+    
+    <select id="category" name="category" onchange="navigateToPage()">
+      <option value="">Choose Category</option> 
+      <option value="Fiction.html">Fiction</option>
+      <option value="non-fiction.html">Non-Fiction</option>
+      <option value="stationary.html">Stationary</option>
+      <option value="gifts.html">Gift & Cards</option>
+    </select>
+  </form>
+                </div>
+            
+                
+
+
+<!--Gifts & Cards-->
+                <div class = "head5" >
+                <div class="text5">
+                    <h1><b>Gifts & Cards</b></h1>    
+                </div><br><br>
+                    
+            <div class="stationary_row">
+                <div class="stationary-col">
+                     <img class="stationary_image" src="images/voucher2500.png" />
+                    <h2>Gift Voucher</h2>
+                    <h5>LKR 2500.00</h5>
+                    <button class="order-btn" onclick="orderNow()">Order Now</button>
+                </div>
+                
+                <div class="stationary-col">
+                     <img class="stationary_image" src="images/voucher5000.png" />
+                    <h2>Gift Voucher</h2>
+                    <h5>LKR 5000.00</h5>
+                    <button class="order-btn" onclick="orderNow()">Order Now</button>
+                </div>
+                
+                <div class="stationary-col">
+                     <img class="stationary_image" src="images/birthdaycard.jpg" />
+                    <h2>Birthday Card</h2>
+                    <h5>LKR 150.00</h5>
+                    <button class="order-btn" onclick="orderNow()">Order Now</button>
+                
+                </div>
+                <div class="stationary-col">
+                     <img class="stationary_image" src="images/valentine.jpg" />
+                    <h2>Valentine Card</h2>
+                    <h5>LKR 150.00</h5>
+                    <button class="order-btn" onclick="orderNow()">Order Now</button>
+                </div>
+            </div>
+            </div>
+                
+                <br><br>
+            
+                </section>
+        
+        
+        
+        <!--Java Script for the dropdown-->
+        
+        <script>
+    function navigateToPage() {
+      var selectedValue = document.getElementById("category").value;
+      if (selectedValue) {
+        window.open(selectedValue, '_blank'); 
+      }
+    }
+  </script>
+        
+        
+        
+        
+        <!--Footer-->
+          <footer>
+  <div class="footer-container">
+    <div class="social-media">
+      <p>Follow Us</p><br>
+      <a href="https://www.facebook.com/himal.kshemendra"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://x.com/KshemendraHimal?t=ubcSA4A_InWPGYn_HfH_cw&s=09"><img src="images/X.jpg" alt="Twitter"></a>
+      <a href="https://www.youtube.com/@himalkshemendra6515"><img src="images/youtube%20(2).png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/himalkshe/"><img src="images/instagram.jpeg" alt="Instagram"></a>
+    </div>
+
+    <div class="logo-section">
+      <img src="images/logo1.png" alt="Company Logo">
+    </div>
+
+    <div class="payment-methods">
+      <p>We Accept</p><br>
+      <img src="images/visa.png" alt="Visa">
+      <img src="images/mastercard.png" alt="MasterCard">
+    </div>
+  </div><br><br>
+              
+                  <!-- Address -->
+      <div class="footer-container">        
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Book World</p>
+        <p>85/10,Jawatta Gardens,</p>
+        <p>Jawatta, Colombo-05</p>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="footer-column">
+        <h3>Call Us</h3>
+        <p>Phone: 070 493 2681</p>
+      </div>
+
+      <!-- Email -->
+      <div class="footer-column">
+        <h3>Email Us</h3>
+        <a href="mailto:info@bookworld.com">e2320425@bit.uom.lk</a>
+      </div>
+              </div> 
+          <br><br>
+              
+ <div class="forms">             
+<div class="contact-form">
+        <h3>Get in Touch</h3><br><br>
+        
+<form action="/submit-contact" method="post">
+        <div class="form-row">
+            <label for="login-name">Name</label>
+            <input type="text" id="name" name="name" class="text-box" required>
+        </div>
+        <div class="form-row">
+            <label for="password">Email</label>
+            <input type="email" id="email" name="email" class="text-box"  required>
+        </div>
+        <div class="form-row">
+            <label for="confirm-password">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-row">
+            <label for="email">Message</label>
+            <input type="text" id="message" name="message" class="message-box" required>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+         </div><br>
+
+
+    <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3><br>
+        <form action="/subscribe-newsletter" method="post">
+            <div class="form-row">
+            <label for="password">Email</label>
+            <input type="email" id="email1" name="email" class="text-box"  required>
+        </div><br>
+            <button type="submit">Subscribe</button>
+        </form>
+              </div>
+     </div>
+              
+              
+        </footer>
+                
+        
+        
+<!--Java Script for the Menu-->
+        
+<script>
+     var nav_links = document.getElementById("nav_links");
+    function show_nav(){
+        nav_links.style.right = "0";
+    }
+    function hide_nav(){
+        nav_links.style.right = "-200px";
+    }
+        
+</script>
+        
+    </body>
+</html>

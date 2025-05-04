@@ -1,0 +1,192 @@
+<html lang="en">
+    
+<head>
+<title>Testimonials Book World </title>
+<link rel="stylesheet" href="web.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+</head>
+    <body>
+        
+<!--Testimonials Page-->
+        
+            <section class="Testimonials">
+                
+                
+                
+<!--Navigation Bar-->
+                
+            <nav class= "navigation">
+            <a href="home.html">
+                <img src="images/logo1.png" />
+            
+            </a>
+            <div class="nav-links" id="nav_links">
+                <i class="fa fa-times fa-lg " onclick="hide_nav()"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="catogary.html">Categories</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a class="active" href="testimonial.html">Testimonial</a></li>
+                </ul>
+            </div>
+                <i class="fa fa-bars fa-lg" onclick="show_nav()" ></i>
+                
+                <form class="search-bar" action="/search" method="GET">
+                    <input type="text" placeholder="Search..." name="query">
+                    <button type="submit">Search</button>
+                </form>
+                
+                </nav>
+                
+                <br><br><br><br><br><br><br><br>
+                
+ <!--Testimonial Videos-->               
+                
+                <div class="test_vid"><h1>Testimonials</h1></div>
+<div class="vid">
+  <div class="video-row">
+    <div class="video-container">
+      <video controls>
+        <source src="videos/Testamonial1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></div>
+        
+        <div class="text-container">
+        <p>"Book World always has what I need. Highly recommended!"</p>
+        <h2><i>-Jack Ryan</i><b> (29th September 2024)</b></h2>
+      </div></div>
+
+   <div class="video-row">   
+    <div class="video-container">
+      <video controls>
+        <source src="videos/testamonial2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></div>
+        
+        <div class="text-container">
+        <p>"Amazing selection and friendly staff—my favorite bookshop!"</p>
+        <h2><i>-Cathie Miller</i><b> (15th January 2024)</b></h2>
+    </div>
+  </div>
+ </div>
+                
+<!-- Checkbox for user feedback -->
+                
+ <div class="form-container1">
+    <form action="/submit_feedback" method="post">
+      <label>
+        <input type="checkbox" id="serviceFeedback" name="serviceFeedback">
+          <b>Did you enjoy our service?</b>
+      </label>
+      <input type="submit" value="Submit">
+    </form>
+  </div><br><br>
+                
+                    
+        </section>
+        
+<!--Footer-->
+          <footer>
+  <div class="footer-container">
+    <div class="social-media">
+      <p>Follow Us</p><br>
+      <a href="https://www.facebook.com/himal.kshemendra"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://x.com/KshemendraHimal?t=ubcSA4A_InWPGYn_HfH_cw&s=09"><img src="images/X.jpg" alt="Twitter"></a>
+      <a href="https://www.youtube.com/@himalkshemendra6515"><img src="images/youtube%20(2).png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/himalkshe/"><img src="images/instagram.jpeg" alt="Instagram"></a>
+    </div>
+
+    <div class="logo-section">
+      <img src="images/logo1.png" alt="Company Logo">
+    </div>
+
+    <div class="payment-methods">
+      <p>We Accept</p><br>
+      <img src="images/visa.png" alt="Visa">
+      <img src="images/mastercard.png" alt="MasterCard">
+    </div>
+  </div><br><br>
+              
+                  <!-- Address -->
+      <div class="footer-container">        
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Book World</p>
+        <p>85/10,Jawatta Gardens,</p>
+        <p>Jawatta, Colombo-05</p>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="footer-column">
+        <h3>Call Us</h3>
+        <p>Phone: 070 493 2681</p>
+      </div>
+
+      <!-- Email -->
+      <div class="footer-column">
+        <h3>Email Us</h3>
+        <a href="mailto:info@bookworld.com">e2320425@bit.uom.lk</a>
+      </div>
+              </div> 
+          <br><br>
+             
+ <div class="forms">             
+<div class="contact-form">
+        <h3>Get in Touch</h3><br><br>
+        
+<form action="/submit-contact" method="post">
+        <div class="form-row">
+            <label for="login-name">Name</label>
+            <input type="text" id="name" name="name" class="text-box" required>
+        </div>
+        <div class="form-row">
+            <label for="password">Email</label>
+            <input type="email" id="email" name="email" class="text-box"  required>
+        </div>
+        <div class="form-row">
+            <label for="confirm-password">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-row">
+            <label for="email">Message</label>
+            <input type="text" id="message" name="message" class="message-box" required>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+         </div><br>
+
+
+    <div class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3><br>
+        <form action="/subscribe-newsletter" method="post">
+            <div class="form-row">
+            <label for="password">Email</label>
+            <input type="email" id="email1" name="email" class="text-box"  required>
+        </div><br>
+            <button type="submit">Subscribe</button>
+        </form>
+              </div>
+     </div>
+              
+              
+              
+        </footer>
+                
+        
+        
+<!--Java Script for the Menu-->
+        
+<script>
+     var nav_links = document.getElementById("nav_links");
+    function show_nav(){
+        nav_links.style.right = "0";
+    }
+    function hide_nav(){
+        nav_links.style.right = "-200px";
+    }
+        
+</script>
+        
+    </body>
+</html>
